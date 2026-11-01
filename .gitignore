@@ -1,0 +1,27 @@
+# Executables (Stockfish binary exceeds GitHub 100MB limit, download from official site)
+*.exe
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary screen capture and debug files
+*.ppm
+debug/*.png
+*.tmp
+
+# Operating system artifacts
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Editor / IDE caches
+.vscode/
+.idea/

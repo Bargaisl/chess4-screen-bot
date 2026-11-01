@@ -1,0 +1,24 @@
+{
+  "rect": [
+    280,
+    223,
+    736,
+    736
+  ],
+  "monitor": 1,
+  "orientation": "auto",
+  "my_color": "white",
+  "turn_hint": "white",
+  "poll_ms": 300,
+  "think_ms": 1200,
+  "auto_detect": true,
+  "enabled": true,
+  "show_grid": false,
+  "automove": false,
+  "multipv": 3,
+  "elo": 2500,
+  "human_time": true,
+  "human_mouse": true,
+  "drag_drop": true,
+  "voice": true
+}
