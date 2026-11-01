@@ -14,9 +14,9 @@ from chessvision.engine import StockfishEngine, find_stockfish
 
 def test_scenario_image1():
     print("[1. Тест Сценария 1: эндшпиль за чёрных]")
-    p1 = r"C:\Users\Пользователь\.gemini\antigravity\brain\eccb084a-a028-4a7f-9928-ee0c72c3437f\.user_uploaded\media_1793030311916_3ae99a57.png"
+    p1 = os.environ.get("TEST_IMAGE_1", os.path.join(BASE_DIR, "debug", "test_scenario_1.png"))
     if not os.path.isfile(p1):
-        print("  Скриншот 1 не найден, пропуск")
+        print("  Скриншот 1 не найден, пропуск (локальный тест)")
         return
     img1 = cv2.imdecode(np.fromfile(p1, dtype=np.uint8), cv2.IMREAD_COLOR)
     rect1 = (2, 10, 568, 580)
@@ -52,9 +52,9 @@ def test_scenario_image1():
 
 def test_scenario_image2():
     print("[2. Тест Сценария 2: распознавание фигур Chess.com (Neo)]")
-    p2 = r"C:\Users\Пользователь\.gemini\antigravity\brain\eccb084a-a028-4a7f-9928-ee0c72c3437f\.user_uploaded\media_1793030340788_dd050d55.png"
+    p2 = os.environ.get("TEST_IMAGE_2", os.path.join(BASE_DIR, "debug", "test_scenario_2.png"))
     if not os.path.isfile(p2):
-        print("  Скриншот 2 не найден, пропуск")
+        print("  Скриншот 2 не найден, пропуск (локальный тест)")
         return
     img2 = cv2.imdecode(np.fromfile(p2, dtype=np.uint8), cv2.IMREAD_COLOR)
     rect2 = (5, 1, 576, 576)
@@ -77,9 +77,9 @@ def test_scenario_image2():
 
 def test_scenario_image3():
     print("[3. Тест Сценария 3: распознавание пешек vs слонов на новом скриншоте пользователя]")
-    p3 = r"C:\Users\Пользователь\.gemini\antigravity\brain\eccb084a-a028-4a7f-9928-ee0c72c3437f\.user_uploaded\media_1793043818218_2ec8a819.png"
+    p3 = os.environ.get("TEST_IMAGE_3", os.path.join(BASE_DIR, "debug", "test_scenario_3.png"))
     if not os.path.isfile(p3):
-        print("  Скриншот 3 не найден, пропуск")
+        print("  Скриншот 3 не найден, пропуск (локальный тест)")
         return
     img3 = cv2.imdecode(np.fromfile(p3, dtype=np.uint8), cv2.IMREAD_COLOR)
     rect3 = (10, 18, 485, 485)
